@@ -2,10 +2,11 @@
   "name": "as24-custom-events",
   "version": "0.0.1",
   "description": "Typings for custom events across as24 pages",
-  "main": "index.js",
   "author": "Inaki Anduaga <inaki.anduaga@scout24.com>",
   "license": "MIT",
   "private": false,
+  "types": "./dist/src/index.ts",
+  "repository": "github.com/Scout24/as24-custom-events",
   "devDependencies": {
     "jest": "^23.5.0",
     "prettier": "^1.14.2",
@@ -16,6 +17,8 @@
     "typescript": "^3.0.1"
   },
   "scripts": {
+    "build": "tsc",
+    "prebuild": "rm -rf ./dist",
     "tslint:fix": "tslint -c ./tslint.json --fix --project ./",
     "test": "jest",
     "test:watch": "jest --notify --watch",
