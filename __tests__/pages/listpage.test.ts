@@ -1,4 +1,4 @@
-import * as p from '../../src/pages/ListPage'
+import * as p from '../../src/pages/listpage'
 
 describe('listpage events', () => {
   const eventNames = [p.ClassifiedListFilterUpdate, p.ClassifiedListTotalCountUpdate]
