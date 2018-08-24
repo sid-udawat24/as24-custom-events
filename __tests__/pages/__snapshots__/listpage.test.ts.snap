@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`listpage events event names must never change 1`] = `"CL_FILTER_UPDATE"`;
+
+exports[`listpage events event names must never change 2`] = `"TOTAL_COUNT_UPDATE"`;
