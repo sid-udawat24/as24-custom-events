@@ -5,3 +5,4 @@ dist
 stats
 coverage
 yarn-error.log
+travis_ci_rsa
