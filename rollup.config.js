@@ -36,7 +36,7 @@ export default [
       filesize(),
       // Bundle size visualizer
       visualizer({
-        filename: './stats/statistics.html',
+        filename: './stats/index.html',
         title: 'as24-custom-events'
       })
     ]
