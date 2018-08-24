@@ -2,6 +2,10 @@
 
 > TypeScript definitions for all custom events available on as24 pages
 
+[![Build Status](https://travis-ci.org/Scout24/as24-custom-events.svg?branch=master)](https://travis-ci.org/Scout24/as24-custom-events)
+
+[![codecov](https://codecov.io/gh/Scout24/as24-custom-events/branch/master/graph/badge.svg)](https://codecov.io/gh/Scout24/as24-custom-events)
+
 This provides a glue at compile time between events produced in some component on a page and listeners on some other part that depend on an agreed event interface (name & payload)
 
 ## Installation:
