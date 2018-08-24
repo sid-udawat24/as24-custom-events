@@ -5,10 +5,20 @@
   "author": "Inaki Anduaga <inaki.anduaga@scout24.com>",
   "license": "MIT",
   "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
   "main": "./dist/index.js",
   "module": "./dist/index.es5.js",
   "types": "./dist/src/index.ts",
-  "repository": "github.com/Scout24/as24-custom-events",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Scout24/as24-custom-events.git"
+  },
   "devDependencies": {
     "@types/jest": "^23.3.1",
     "jest": "^23.5.0",
@@ -58,6 +68,9 @@
     ],
     "coverageDirectory": "./coverage/",
     "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/**/*.ts"
+    ],
     "coverageReporters": [
       "cobertura",
       "html",

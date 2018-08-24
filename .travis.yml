@@ -8,8 +8,6 @@ cache:
 notifications:
   email: false
 before_install:
-  - openssl aes-256-cbc -K $encrypted_ab46abe2afd1_key -iv $encrypted_ab46abe2afd1_iv
-    -in travis_ci_rsa.enc -out ./travis_ci_rsa -d
   - set -e
 install:
   - yarn install
@@ -19,3 +17,28 @@ script:
   - yarn run build
 after_success:
   - codecov
+before_deploy:
+  # Add ssh key w/ write permission for `as24-custom-events` repo
+  - openssl aes-256-cbc -K $encrypted_ab46abe2afd1_key -iv $encrypted_ab46abe2afd1_iv -in travis_ci_rsa.enc -out ./travis_ci_rsa -d
+  - chmod 600 travis_ci_rsa
+  - eval `ssh-agent -s`
+  - ssh-add travis_ci_rsa
+deploy:
+  - provider: npm
+    email: '#AS24-Web-Experience-Team-ds@scout24.com'
+    skip_cleanup: true
+    api_key:
+      secure: o7ISixwUP0ld20BDuQlKwXNTB0NM7flq38YUZWVRl8PFwekb/qSwzK6ZJWSQ5HstodxofVotLDXmHcjAfpozp5FHMKOLd9nEajcpURaSp3YtZm5FX7vZKXG5EBj8wEJ8B6UYuMMYhjfY1U35xc0DqMggGBVj58k31c1LcRMrJzX/xAfATsOnjNKGXuzU6nPLrGJywfTWQk3mLhjfNWq6ZW54CCY4A5CzsFWYTjHa4OGCFpZ7KNyG+bIs/J/UuHl86exdL8S54GDR8BtYe2Cp852HsBxpDUM1ZjvNcGIT+eQc3H/sNouRt5t74cTD+/9GDidmgFf7YI4jkJLO2mvT2PVv43GYyI26pAH9BJtTXLxjwSsht1NxWpGajmDIJWS9D0aVkfcKuTd2+JryYqIuxCLBTbgRPliaiPCf8a4w6RPYC4t0ICAtmFr5KhlcTkUzUiAZHsu+HaO6VgOzb0YKepyS3wNPVfXA0oAFgTBoYaoSFA990oRLop/2C+PVFbGrvYod8vACD6KjnLMm6bLi14iYxDDcPAmTqMn36RII3Wo4HBwYdwOPBC1wMsnTP5Rp+y5dJpJTw1N5qe+Wb7wdxEqwMX04zEoPI6puQBR9q4I90LxlUuKRo7b8wnYEILyzxVkURDriU7mCL1+m0AI+eSZ98rvt+RWvPCcie6e3h68=
+    on:
+      tags: true
+      repo: Scout24/as24-custom-events
+      branch: master
+  - provider: releases
+    skip_cleanup: true
+    file_glob: true
+    file:
+      - './dist/**/*'
+    on:
+      tags: true
+      repo: Scout24/as24-custom-events
+      branch: master
