@@ -68,6 +68,9 @@
     ],
     "coverageDirectory": "./coverage/",
     "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/**/*.ts"
+    ],
     "coverageReporters": [
       "cobertura",
       "html",
