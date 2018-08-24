@@ -33,7 +33,8 @@
     "test": "jest",
     "test:watch": "jest --notify --watch",
     "test:coverage:publish": "codecov",
-    "test:prettier": "prettier --list-different '*/**/*.{js,ts,tsx,json,md,scss,graphql,css}' || (echo \"Problem with code format. Please do yarn run prettier:fix\" && exit 1)"
+    "test:prettier": "prettier --list-different '*/**/*.{js,ts,tsx,json,md,scss,graphql,css}' || (echo \"Problem with code format. Please do yarn run prettier:fix\" && exit 1)",
+    "pretest": "tsc --noEmit && tslint -c ./tslint.json --test --project ./"
   },
   "jest": {
     "globals": {
