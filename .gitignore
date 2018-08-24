@@ -4,3 +4,4 @@ dist
 .rpt2_cache
 stats
 coverage
+yarn-error.log
