@@ -17,7 +17,7 @@ export type ClassifiedListTotalCountUpdate = {
   totalCount: number | null
 }
 
-// inform compiler of available custom events
+// inform compiler of the as24 custom events
 declare global {
   interface DocumentEventMap {
     [ClassifiedListFilterUpdate]: CustomEvent<ClassifiedListFilterUpdate>
