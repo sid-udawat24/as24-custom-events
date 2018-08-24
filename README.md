@@ -3,12 +3,31 @@
 > TypeScript definitions for all custom events available on as24 pages
 
 [![Build Status](https://travis-ci.org/Scout24/as24-custom-events.svg?branch=master)](https://travis-ci.org/Scout24/as24-custom-events)
-
 [![codecov](https://codecov.io/gh/Scout24/as24-custom-events/branch/master/graph/badge.svg)](https://codecov.io/gh/Scout24/as24-custom-events)
 
-This provides a glue at compile time between events produced in some component on a page and listeners on some other part that depend on an agreed event interface (name & payload)
+<!-- installing doctoc: https://github.com/thlorenz/doctoc#installation -->
 
-## Installation:
+<!-- tocdoc command: doctoc ./README.md --maxlevel 3 --notitle -->
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+
+- [Installation](#installation)
+- [Usage](#usage)
+  - [Listen to custom events](#listen-to-custom-events)
+  - [Firing custom events](#firing-custom-events)
+- [Polyfill (TODO)](#polyfill-todo)
+- [Contributing](#contributing)
+  - [Adding custom events](#adding-custom-events)
+  - [Versioning](#versioning)
+  - [Rollup config](#rollup-config)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+This library provides a glue at compile-time between DOM CustomEvents produced in some component on a page and listeners from other components on that same page that depend on an agreed event interface (name & payload)
+
+## Installation
 
 Install as a regular `npm` package
 
@@ -20,7 +39,7 @@ npm install --save as24-custom-events@latest
 
 it's important to use the `@latest` tag so package is always up to date. It wouldn't help to pin to a particular version since at runtime the events will behave like `@latest`.
 
-## Usage:
+## Usage
 
 ### Listen to custom events
 
@@ -50,7 +69,7 @@ document.dispatchEvent(strictCustomEvent(ListPage.ClassifiedListTotalCountUpdate
 
 The compiler will make sure that the payload in `detail` matches the event definition associated to the key.
 
-## Polyfill
+## Polyfill (TODO)
 
 A custom polyfill for CustomEvent support on older browsers (IE11 and below) is [provided](./ADD LINK) in case you want to add it to your bundle
 
