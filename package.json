@@ -1,6 +1,6 @@
 {
   "name": "as24-custom-events",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Typings for custom events across as24 pages",
   "author": "Inaki Anduaga <inaki.anduaga@scout24.com>",
   "license": "MIT",
@@ -50,7 +50,7 @@
   "jest": {
     "globals": {
       "ts-jest": {
-        "tsConfigFile": "tsconfig.test.json"        
+        "tsConfigFile": "tsconfig.test.json"
       }
     },
     "transform": {
