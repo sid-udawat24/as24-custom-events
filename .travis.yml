@@ -31,6 +31,7 @@ after_success:
       if [[ ! -z "$SEMVER_BUMP" ]]; then
         echo "Bumping package version for $SEMVER_BUMP release and pushing tag to github"
         yarn version --new-version $SEMVER_BUMP
+        git remote set-url origin git@github.com:Scout24/as24-custom-events.git # use ssh instead of https
         git push origin master --follow-tags
       else 
         echo "No sematic version release label found on PR, tagging skipped."        
