@@ -26,14 +26,14 @@ after_success:
     # Check if we need to do SEMVER bump based on commit's parent PR labels
     # - only run for master branch we don't want to release PRs and other branches
     # - only run on non-tagged releases, this will bump the version, tag, commit & push back to github
-    if [ "$TRAVIS_PULL_REQUEST" != "true" ] && [ -z "$TRAVIS_TAG" ] && [ "$TRAVIS_BRANCH" == "master" ]; then 
+    if [ "$TRAVIS_PULL_REQUEST" == "false" ] && [ -z "$TRAVIS_TAG" ] && [ "$TRAVIS_BRANCH" == "master" ]; then 
       echo "Travis commit: $TRAVIS_COMMIT"
       SEMVER_BUMP=$(./semver_from_pr_labels.sh $TRAVIS_COMMIT 2>/dev/null)
       echo $SERVER_BUMP
       if [ -z "$SERVER_BUMP" ]; then
         echo "Bumping package version for $SEMVER_BUMP release and pushing tag to github"
         yarn version --new-version $SEMVER_BUMP
-        git push --follow-tags
+        git push origin master --follow-tags
       fi
     fi
 deploy:
