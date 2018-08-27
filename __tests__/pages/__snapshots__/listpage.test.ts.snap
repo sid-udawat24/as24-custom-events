@@ -4,6 +4,6 @@ exports[`listpage events event names must never change 1`] = `"CL_FILTER_UPDATE"
 
 exports[`listpage events event names must never change 2`] = `"TOTAL_COUNT_UPDATE"`;
 
-exports[`listpage events event names must never change 3`] = `"LIST_ITEMS_INITIALIZED"`;
+exports[`listpage events event names must never change 3`] = `"list-items:changed"`;
 
 exports[`listpage events event names must never change 4`] = `"SAVED_SEARCHES_FRAGMENT_INIT"`;
