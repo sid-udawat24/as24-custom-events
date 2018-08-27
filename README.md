@@ -16,7 +16,7 @@
 - [Usage](#usage)
   - [Listen to custom events](#listen-to-custom-events)
   - [Firing custom events](#firing-custom-events)
-- [Polyfill (TODO)](#polyfill-todo)
+- [Polyfill](#polyfill)
 - [Contributing](#contributing)
   - [Adding custom events](#adding-custom-events)
   - [Versioning](#versioning)
@@ -67,9 +67,9 @@ document.dispatchEvent(strictCustomEvent(ListPage.ClassifiedListTotalCountUpdate
 
 The compiler will make sure that the payload in `detail` matches the event definition associated to the key.
 
-## Polyfill (TODO)
+## Polyfill
 
-A custom polyfill for CustomEvent support on older browsers (IE11 and below) is [provided](./ADD LINK) in case you want to add it to your bundle
+A [custom polyfill](./src/polyfill/CustomEvent.js) for `CustomEvent constructor syntax support` on older browsers (IE11 and below) is provided in case you want to add it to your build
 
 ## Contributing
 
