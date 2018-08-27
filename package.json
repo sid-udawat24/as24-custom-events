@@ -1,6 +1,6 @@
 {
   "name": "as24-custom-events",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Typings for custom events across as24 pages",
   "author": "Inaki Anduaga <inaki.anduaga@scout24.com>",
   "license": "MIT",
