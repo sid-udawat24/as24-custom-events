@@ -46,7 +46,7 @@ deploy:
       secure: jAEJ0q/LM8mc2l8uSWfJQlredXyEaYU70bka5TkYX6kl4euczzmd4EfXcvZt7HRphPIdOZ9U3bv71M5sR71Gzwv14ImRzMtEhMeswbT24zvH+9eQl5WL2toKHqJua55ow/uvQifND4j1BW4pgOOTJFP1okerCnzg1RBBhlEY1Ee14M34XKaP8EISl0yd/O1fNX3qT7nIsFDGs/9bxATT30wH5KoFlG11QMJMCdTij8KAVTXvPXHAXxzuhgFTlE4/ZuNAZO4KdXFnjJxfs4KDr4Hxw3W+OYumOzXnVTeVOd9LhkmDfF9Lvekr5OsGnWDMpNTVtJj5dtsvF6ZHlxkRfDPVHZ8bOahMp06nvtWMcbxrTYPNz59C6qvs5mLhSiIU6WrsMghcwJTHQRWq+LnAlX4i8D7UvP+LpIhRhyjak/x5zkxLXuLmvi0I6bLJks99ndC08DtTdkGzHwKJZspen6MEeSMpz0p3KXAl0yn7r9T0JIG/CxnLEj4nmg5hjaBJ0Z1xTqoyzGz9LmuYZoILR+2n+6c7SXwdSqnx1PZhaWnGxLCkRF9+lBdG5r4Y/Gm2o1l84Ey5ZGClWRH18QaCGXMGD9bDZomMNfFHu1OWHuHzljrQV+/gBqi1yUcwzR2z+QknA2MESRwfoq0NlxAXOWRa1Q9xomQDdDsTaIi916A=
     file_glob: true
     file:
-      - './dist/**/*'
+      - './dist/index*'
     on:
       tags: true
       repo: Scout24/as24-custom-events
