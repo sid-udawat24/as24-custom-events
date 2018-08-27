@@ -45,8 +45,7 @@ it's important to use the `@latest` tag so package is always up to date. It woul
 To add an event listener somewhere on your page, you do the usual event listener registration on **Document** root element
 
 ```ts
-// some file in your app
-
+// somewhere in your app...
 import { ListPage } from 'as24-custom-events'
 
 document.addEventListener(ListPage.ClassifiedListFilterUpdate, e => console.log(e.detail.searchUrls.standard))
