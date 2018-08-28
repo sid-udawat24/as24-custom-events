@@ -5,6 +5,11 @@
   "author": "Inaki Anduaga <inaki.anduaga@scout24.com>",
   "license": "MIT",
   "private": false,
+  "keywords": [
+    "typescript",
+    "typesafe",
+    "custom-events"
+  ],
   "publishConfig": {
     "access": "public"
   },
