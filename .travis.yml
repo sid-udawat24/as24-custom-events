@@ -12,7 +12,6 @@ env:
     # GitHub API access token
     secure: AbvA2fTH2rAP9xQ/u+gNXvffcWEQYX3l0tpLXc7Gfezffvynhqn8uX4nvvqpMSR+MaRgWtJSayAk95DLEbIwaugfTqWQ89/tWWq3q/t5Ov34kX3x9TTlooKb0Tf4Z9o7qealxkww2PXZhCV+LXisEc6NMmwYqpxV0K2mb2qjh22RkmqQ0D4/jcXCEvMmbI08ECGMu7BW+X4RRWDNCYWhKT8FeZSvkrUHCRe6ocilVwfhhm7dS5jVkGAwIu6XvIYRJ2V1nk8cvagFjF4vy8+5C9aSaug2Q1c3fldCQnU8zmmrXTjHZcPOfo/0OvpK7saohhQGiQILELMnDSIe4+gLpTkOS0q5iBm5fbFKBOCHcg7Wf5u9+6oeUuE7Eik0JRAWe44FtJ3Lix+71w5pikFH4RtFwn80UFitY1h9df8kkYeeoKEhdaiK141LRBI0nVFEiZSH3O/ZRgTqKS5WBB/F6sdoELgfUi39VZRSoE2Yar0q1XDEHDSLd/lOyt2mgLbbwOd7W1a4WX+9CND9JIF9e4C9xX1BGgxlst17V2wTRE4OfSOwVKFQ6wYde0UcM3jIbE7K6I1Qwv1mepwZ9oEUI0UgXLT3z1Rsa/MsAk+vT19v0M/lEjRbJALoSk9uR+5nPE8NZA/1os6HnCAM02x7pbHkPUOQvPYrFqvsT9m+MZE=
 before_install:
-  - set -e
   # Add ssh key w/ write permission for `as24-custom-events` repo
   - openssl aes-256-cbc -K $encrypted_ab46abe2afd1_key -iv $encrypted_ab46abe2afd1_iv -in travis_ci_rsa.enc -out ./travis_ci_rsa -d
   - chmod 600 travis_ci_rsa
@@ -44,18 +43,6 @@ after_success:
       fi
     fi
 deploy:
-  # - provider: releases
-  #   skip_cleanup: true
-  #   api_key:
-  #     # access token from user: scout24-as24-custom-events-ci
-  #     secure: jAEJ0q/LM8mc2l8uSWfJQlredXyEaYU70bka5TkYX6kl4euczzmd4EfXcvZt7HRphPIdOZ9U3bv71M5sR71Gzwv14ImRzMtEhMeswbT24zvH+9eQl5WL2toKHqJua55ow/uvQifND4j1BW4pgOOTJFP1okerCnzg1RBBhlEY1Ee14M34XKaP8EISl0yd/O1fNX3qT7nIsFDGs/9bxATT30wH5KoFlG11QMJMCdTij8KAVTXvPXHAXxzuhgFTlE4/ZuNAZO4KdXFnjJxfs4KDr4Hxw3W+OYumOzXnVTeVOd9LhkmDfF9Lvekr5OsGnWDMpNTVtJj5dtsvF6ZHlxkRfDPVHZ8bOahMp06nvtWMcbxrTYPNz59C6qvs5mLhSiIU6WrsMghcwJTHQRWq+LnAlX4i8D7UvP+LpIhRhyjak/x5zkxLXuLmvi0I6bLJks99ndC08DtTdkGzHwKJZspen6MEeSMpz0p3KXAl0yn7r9T0JIG/CxnLEj4nmg5hjaBJ0Z1xTqoyzGz9LmuYZoILR+2n+6c7SXwdSqnx1PZhaWnGxLCkRF9+lBdG5r4Y/Gm2o1l84Ey5ZGClWRH18QaCGXMGD9bDZomMNfFHu1OWHuHzljrQV+/gBqi1yUcwzR2z+QknA2MESRwfoq0NlxAXOWRa1Q9xomQDdDsTaIi916A=
-  #   file_glob: true
-  #   file:
-  #     - './dist/index*'
-  #   on:
-  #     tags: true
-  #     repo: Scout24/as24-custom-events
-  #     branch: master
   - provider: npm
     email: '#AS24-Web-Experience-Team-ds@scout24.com'
     skip_cleanup: true
