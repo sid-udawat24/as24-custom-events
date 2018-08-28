@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "@types/jest": "^23.3.1",
+    "github-release-cli": "^0.4.1",
     "jest": "^23.5.0",
     "lerna-changelog": "^0.8.0",
     "prettier": "^1.14.2",
@@ -47,8 +48,9 @@
     "test:coverage:publish": "codecov",
     "test:prettier": "prettier --list-different '*/**/*.{js,ts,tsx,json,md,scss,graphql,css}' || (echo \"Problem with code format. Please do yarn run prettier:fix\" && exit 1)",
     "pretest": "tsc --noEmit && tslint -c ./tslint.json --test --project ./",
-    "changelog:update": "TEMP=`lerna-changelog`; echo ${TEMP##[[:space:]]} | cat - CHANGELOG.md > temp && mv temp CHANGELOG.md",
-    "changelog:regenerate": "lerna-changelog --from=v0.0.2 > CHANGELOG.md"
+    "changelog": "lerna-changelog",
+    "changelog:regenerate": "lerna-changelog --from=v0.0.2 > CHANGELOG.md",
+    "github-release": "github-release"
   },
   "changelog": {
     "labels": {
