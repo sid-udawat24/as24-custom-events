@@ -7,6 +7,10 @@ cache:
     - node_modules
 notifications:
   email: false
+env:
+  global:
+    # GitHub API access token
+    secure: AbvA2fTH2rAP9xQ/u+gNXvffcWEQYX3l0tpLXc7Gfezffvynhqn8uX4nvvqpMSR+MaRgWtJSayAk95DLEbIwaugfTqWQ89/tWWq3q/t5Ov34kX3x9TTlooKb0Tf4Z9o7qealxkww2PXZhCV+LXisEc6NMmwYqpxV0K2mb2qjh22RkmqQ0D4/jcXCEvMmbI08ECGMu7BW+X4RRWDNCYWhKT8FeZSvkrUHCRe6ocilVwfhhm7dS5jVkGAwIu6XvIYRJ2V1nk8cvagFjF4vy8+5C9aSaug2Q1c3fldCQnU8zmmrXTjHZcPOfo/0OvpK7saohhQGiQILELMnDSIe4+gLpTkOS0q5iBm5fbFKBOCHcg7Wf5u9+6oeUuE7Eik0JRAWe44FtJ3Lix+71w5pikFH4RtFwn80UFitY1h9df8kkYeeoKEhdaiK141LRBI0nVFEiZSH3O/ZRgTqKS5WBB/F6sdoELgfUi39VZRSoE2Yar0q1XDEHDSLd/lOyt2mgLbbwOd7W1a4WX+9CND9JIF9e4C9xX1BGgxlst17V2wTRE4OfSOwVKFQ6wYde0UcM3jIbE7K6I1Qwv1mepwZ9oEUI0UgXLT3z1Rsa/MsAk+vT19v0M/lEjRbJALoSk9uR+5nPE8NZA/1os6HnCAM02x7pbHkPUOQvPYrFqvsT9m+MZE=
 before_install:
   - set -e
   # Add ssh key w/ write permission for `as24-custom-events` repo
@@ -29,11 +33,17 @@ after_success:
     if [ "$TRAVIS_PULL_REQUEST" == "false" ] && [ -z "$TRAVIS_TAG" ] && [ "$TRAVIS_BRANCH" == "master" ]; then 
       SEMVER_BUMP=$(./semver_from_pr_labels.sh $TRAVIS_COMMIT 2>/dev/null)      
       if [[ ! -z "$SEMVER_BUMP" ]]; then
+        
+        echo "Updating CHANGELOG with all changes since last tagged commit..."
+        yarn run changelog:update
+        git add CHANGELOG.md
+
         echo "Bumping package version for $SEMVER_BUMP release and pushing tag to github"
         git checkout master # switch to master branch (which is the same as the current commit), so we are not in DETACHED mode
         yarn version --new-version $SEMVER_BUMP
         git remote set-url origin git@github.com:Scout24/as24-custom-events.git # use ssh instead of https
         git push origin master --follow-tags
+
       else 
         echo "No sematic version release label found on PR, tagging skipped."        
       fi
