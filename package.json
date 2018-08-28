@@ -48,7 +48,7 @@
     "test:prettier": "prettier --list-different '*/**/*.{js,ts,tsx,json,md,scss,graphql,css}' || (echo \"Problem with code format. Please do yarn run prettier:fix\" && exit 1)",
     "pretest": "tsc --noEmit && tslint -c ./tslint.json --test --project ./",
     "changelog:update": "lerna-changelog | cat - CHANGELOG.md > temp && mv temp CHANGELOG.md",
-    "changelog:regenerate": "lerna-changelog > CHANGELOG.md"
+    "changelog:regenerate": "lerna-changelog --from=v0.0.2 > CHANGELOG.md"
   },
   "changelog": {
     "labels": {
