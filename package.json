@@ -1,5 +1,5 @@
 {
-  "name": "@scout24/custom-events",
+  "name": "@autoscout24/custom-events",
   "version": "0.1.7",
   "description": "Typings for custom events across as24 pages",
   "author": "Inaki Anduaga <inaki.anduaga@scout24.com>",
