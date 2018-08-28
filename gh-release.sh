@@ -10,4 +10,4 @@ yarn run github-release upload \
           --tag="$TRAVIS_TAG" \
           --name="$TRAVIS_TAG" \
           --body="${CHANGELOG}" \
-          "dist/index*";
+          "./dist/index*";
