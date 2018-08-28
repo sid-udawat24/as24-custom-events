@@ -1,4 +1,4 @@
-# AS24 Custom Events
+# AutoScout24 Custom Events
 
 > TypeScript definitions for all custom events available on as24 pages
 
@@ -31,9 +31,9 @@ This library provides a glue at compile-time between DOM CustomEvents produced i
 Install as a regular `npm` package
 
 ```sh
-yarn add as24-custom-events@latest
+yarn add @autoscout24/custom-events@latest
 or
-npm install --save as24-custom-events@latest
+npm install --save @autoscout24/custom-events@latest
 ```
 
 it's important to use the `@latest` tag so package is always up to date. It wouldn't help to pin to a particular version since at runtime the events will behave like `@latest`.
@@ -46,7 +46,7 @@ To add an event listener somewhere on your page, you do the usual event listener
 
 ```ts
 // somewhere in your app...
-import { ListPage } from 'as24-custom-events'
+import { ListPage } from '@autoscout24/custom-events'
 
 document.addEventListener(ListPage.ClassifiedListFilterUpdate, e => console.log(e.detail.searchUrls.standard))
 ```
@@ -58,7 +58,7 @@ the compiler will know that the event is of type `e: ListPage.ClassifiedListFilt
 All custom events should be fired on the top Document root. To fire an event in a typesafe way, you can use the helper [strictCustomEvent](./src/constructors/strictCustomEvent.ts). It has the same signature as the usual `CustomEvent` constructor but it's typesafe (will check for consistency between name and payload)
 
 ```ts
-import { ListPage, strictCustomEvent } from 'as24-custom-events'
+import { ListPage, strictCustomEvent } from '@autoscout24/custom-events'
 
 document.dispatchEvent(strictCustomEvent(ListPage.ClassifiedListTotalCountUpdate, { detail: {
   totalCount: 42
