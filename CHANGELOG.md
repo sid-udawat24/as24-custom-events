@@ -1,3 +1,4 @@
+## Unreleased (2018-08-28) #### Bugfix / Refactoring CHANGELOG.md LICENSE.md README.md __tests__ coverage dist node_modules package.json rollup.config.js semver_from_pr_labels.sh src stats travis_ci_rsa travis_ci_rsa.enc tsconfig.json tsconfig.test.json tslint.json yarn.lock [#27](https://github.com/Scout24/as24-custom-events/pull/27) Changelog generation ([@inakianduaga](https://github.com/inakianduaga)) #### Committers: 1 - Inaki Anduaga ([@inakianduaga](https://github.com/inakianduaga))
 
 ## v0.1.2 (2018-08-27)
 
