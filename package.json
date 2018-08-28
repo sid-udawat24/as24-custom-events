@@ -19,7 +19,7 @@
   ],
   "main": "./dist/index.js",
   "module": "./dist/index.es5.js",
-  "types": "./dist/src/index.ts",
+  "types": "./dist/src/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Scout24/as24-custom-events.git"
@@ -60,6 +60,7 @@
   "changelog": {
     "labels": {
       "enhancement": "New Feature",
+      "docs": "Documentation",
       "bugfix": "Bugfix",
       "release:bugfix": "Bugfix / Refactoring",
       "release:enhancement": "New Feature",
