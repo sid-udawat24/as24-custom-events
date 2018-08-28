@@ -22,6 +22,7 @@
   "devDependencies": {
     "@types/jest": "^23.3.1",
     "jest": "^23.5.0",
+    "lerna-changelog": "^0.8.0",
     "prettier": "^1.14.2",
     "rollup": "^0.64.1",
     "rollup-plugin-commonjs": "^9.1.5",
@@ -46,6 +47,15 @@
     "test:coverage:publish": "codecov",
     "test:prettier": "prettier --list-different '*/**/*.{js,ts,tsx,json,md,scss,graphql,css}' || (echo \"Problem with code format. Please do yarn run prettier:fix\" && exit 1)",
     "pretest": "tsc --noEmit && tslint -c ./tslint.json --test --project ./"
+  },
+  "changelog": {
+    "labels": {
+      "enhancement": "New Feature",
+      "bugfix": "Bugfix",
+      "release:bugfix": "Bugfix / Refactoring",
+      "release:enhancement": "New Feature",
+      "release:breaking": "Breaking Change"
+    }
   },
   "jest": {
     "globals": {
