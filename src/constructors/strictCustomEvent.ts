@@ -17,7 +17,7 @@ export const strictCustomEvent = <
  */
 type UnpackCustomEventPayload<T> = T extends CustomEvent<infer U> ? U : never
 
-type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>
+type Omit<T, K> = Pick<T, Exclude<keyof T, K>> // A more strict type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>> breaks TypeScript 2.9, works in 3.0
 
 /**
  * List of all standard dom events, extracted from TypeScript lib.dom.d.ts.

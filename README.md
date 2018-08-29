@@ -4,6 +4,8 @@
 
 [![Build Status](https://travis-ci.org/Scout24/as24-custom-events.svg?branch=master)](https://travis-ci.org/Scout24/as24-custom-events)
 [![codecov](https://codecov.io/gh/Scout24/as24-custom-events/branch/master/graph/badge.svg)](https://codecov.io/gh/Scout24/as24-custom-events)
+[![npm version](https://badge.fury.io/js/%40autoscout24%2Fcustom-events.svg)](https://badge.fury.io/js/%40autoscout24%2Fcustom-events)
+[![typescript version](https://img.shields.io/badge/typescript-2.8+-blue.svg)](https://img.shields.io/badge/typescript-2.8+-pink.svg)
 
 <!-- installing doctoc: https://github.com/thlorenz/doctoc#installation -->
 
