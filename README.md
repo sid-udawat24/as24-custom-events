@@ -83,6 +83,8 @@ To add a new page event:
 2. Define both a `constant` with the event name and `type alias` with the payload (we exploit Typescript duality to handle types and values under same name)
 3. Register the event on the `DocumentEventMap` so compiler knows about it everywhere. Note that this makes the events available only on the `Document` DOM element, which is good because that's where we should dispatch them.
 
+**Naming convention**: To avoid collisions and ensure consistency, `CustomEvent` names should be of the form `<SERVICE>:<NAME>`, for example, `CLASSIFIED_LIST:FILTER_UPDATE`, etc.
+
 ### Versioning
 
 Since the global events are not really controlled by this library (they are fired by other applications), even if we tag a change as breaking it's not like the consumers will be safe by staying on older versions since at runtime the events will be upgraded. We still use versioning to keep the clients informed of potential breaking changes (ideally there should be none)
