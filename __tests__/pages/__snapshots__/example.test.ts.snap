@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`homepage events event names must never change 1`] = `"SOME_FRAGMENT:INITIALIZED"`;
+
+exports[`homepage events event names must never change 2`] = `"TATSU_SERVICE_TEMPLATE:SELECT_IMAGE"`;
