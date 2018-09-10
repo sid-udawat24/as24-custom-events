@@ -5,6 +5,7 @@ import typescript from 'rollup-plugin-typescript2'
 import { terser } from 'rollup-plugin-terser'
 import visualizer from 'rollup-plugin-visualizer'
 import filesize from 'rollup-plugin-filesize'
+import tslint from 'rollup-plugin-tslint';
 
 const pkg = require('./package.json')
 
@@ -25,6 +26,7 @@ export default [
     plugins: [
       // Compile TypeScript files
       typescript({ useTsconfigDeclarationDir: true, tsconfig: 'tsconfig.json' }),
+      tslint({throwError:true}),
       // Allow bundling cjs modules (unlike webpack, rollup doesn't understand cjs)
       commonjs(),
       // Allow node_modules resolution, so you can use 'external' to control

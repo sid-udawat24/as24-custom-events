@@ -22,7 +22,6 @@ export type TatsuServiceTemplateSelectImage = {
   selectedImage: number
 }
 
-
 // Add events to Document
 declare global {
   interface DocumentEventMap {
