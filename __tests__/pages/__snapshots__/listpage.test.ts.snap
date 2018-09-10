@@ -9,3 +9,5 @@ exports[`listpage events event names must never change 3`] = `"list-items:change
 exports[`listpage events event names must never change 4`] = `"SAVED_SEARCHES_FRAGMENT_INIT"`;
 
 exports[`listpage events event names must never change 5`] = `"LIST_ITEMS_INITIALIZED"`;
+
+exports[`listpage events event names must never change 6`] = `"WEB_PUSH:OPT_IN"`;
