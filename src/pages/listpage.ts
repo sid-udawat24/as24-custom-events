@@ -20,6 +20,18 @@ export type ClassifiedListFilterUpdate = {
   }
 }
 
+export const WebPushOptIn = 'WEB_PUSH:OPT_IN'
+export type WebPushOptIn = {
+  /**
+   * id of the customer who opt-in
+   */
+  as24Visitor: string
+  /**
+   * FCM push token
+   */
+  pushToken: string
+}
+
 export const ClassifiedListTotalCountUpdate = 'TOTAL_COUNT_UPDATE'
 export type ClassifiedListTotalCountUpdate = {
   totalCount: number | null
@@ -48,5 +60,6 @@ declare global {
     [SavedSearchesFragmentInitialization]: CustomEvent<SavedSearchesFragmentInitialization>
     [ListItemsChanged]: CustomEvent<ListItemsChanged>
     [ListItemsInitialized]: CustomEvent<ListItemsInitialized>
+    [WebPushOptIn]: CustomEvent<WebPushOptIn>
   }
 }
