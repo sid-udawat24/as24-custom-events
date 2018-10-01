@@ -52,10 +52,17 @@ export type ListItemsInitialized = undefined
 export const SavedSearchesFragmentInitialization = 'SAVED_SEARCHES_FRAGMENT_INIT'
 export type SavedSearchesFragmentInitialization = undefined
 
+/**
+ * Retrieve the current filters. The list page will fire a CL_FILTER_UPDATE as a response
+ */
+export const ClassifiedListRequestFiltersValue = 'CLASSIFIED_LIST:REQUEST_FILTER_VALUES'
+export type ClassifiedListRequestFiltersValue = undefined
+
 // inform compiler of the as24 custom events
 declare global {
   interface DocumentEventMap {
     [ClassifiedListFilterUpdate]: CustomEvent<ClassifiedListFilterUpdate>
+    [ClassifiedListRequestFiltersValue]: CustomEvent<ClassifiedListRequestFiltersValue>
     [ClassifiedListTotalCountUpdate]: CustomEvent<ClassifiedListTotalCountUpdate>
     [SavedSearchesFragmentInitialization]: CustomEvent<SavedSearchesFragmentInitialization>
     [ListItemsChanged]: CustomEvent<ListItemsChanged>
