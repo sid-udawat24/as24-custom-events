@@ -13,3 +13,5 @@ exports[`listpage events event names must never change 5`] = `"LIST_ITEMS_INITIA
 exports[`listpage events event names must never change 6`] = `"WEB_PUSH:OPT_IN"`;
 
 exports[`listpage events event names must never change 7`] = `"CLASSIFIED_LIST:REQUEST_FILTER_VALUES"`;
+
+exports[`listpage events event names must never change 8`] = `"CLASSIFIED_LIST:FILTER_EDIT_INITIALIZED"`;

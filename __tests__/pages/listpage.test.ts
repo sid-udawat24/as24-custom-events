@@ -8,7 +8,8 @@ describe('listpage events', () => {
     p.SavedSearchesFragmentInitialization,
     p.ListItemsInitialized,
     p.WebPushOptIn,
-    p.ClassifiedListRequestFiltersValue
+    p.ClassifiedListRequestFiltersValue,
+    p.ClassifiedListFilterEditInitialized
   ]
 
   test.each(eventNames)('event names must never change', eventName => {
@@ -23,6 +24,7 @@ describe('listpage events', () => {
     document.addEventListener(p.SavedSearchesFragmentInitialization, e => e.detail as undefined)
     document.addEventListener(p.WebPushOptIn, e => e.detail.as24Visitor as string)
     document.addEventListener(p.ClassifiedListRequestFiltersValue, e => e.detail as undefined)
+    document.addEventListener(p.ClassifiedListFilterEditInitialized, e => e.detail as undefined)
     expect(true).toBeTruthy() // dummy assertion since compiler check is the real test
   })
 })
