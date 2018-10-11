@@ -58,6 +58,12 @@ export type SavedSearchesFragmentInitialization = undefined
 export const ClassifiedListRequestFiltersValue = 'CLASSIFIED_LIST:REQUEST_FILTER_VALUES'
 export type ClassifiedListRequestFiltersValue = undefined
 
+/**
+ * Indicate when filter edit fragment has been initialized
+ */
+export const ClassifiedListFilterEditInitialized = 'CLASSIFIED_LIST:FILTER_EDIT_INITIALIZED'
+export type ClassifiedListFilterEditInitialized = undefined
+
 // inform compiler of the as24 custom events
 declare global {
   interface DocumentEventMap {
@@ -68,5 +74,6 @@ declare global {
     [ListItemsChanged]: CustomEvent<ListItemsChanged>
     [ListItemsInitialized]: CustomEvent<ListItemsInitialized>
     [WebPushOptIn]: CustomEvent<WebPushOptIn>
+    [ClassifiedListFilterEditInitialized]: CustomEvent<ClassifiedListFilterEditInitialized>
   }
 }
