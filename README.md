@@ -69,6 +69,12 @@ document.dispatchEvent(strictCustomEvent(ListPage.ClassifiedListTotalCountUpdate
 
 The compiler will make sure that the payload in `detail` matches the event definition associated to the key.
 
+## Debugging
+
+You can log all custom event traffic easily on the browser by pasting the contents of [logCustomEvents](./logCustomEvents.js) into the console. This will log all events
+
+![log custom event](https://user-images.githubusercontent.com/4490289/48299536-61341800-e4ce-11e8-9788-09b2a97b2435.gif)
+
 ## Polyfill
 
 A [custom polyfill](./src/polyfill/CustomEvent.js) for `CustomEvent constructor syntax support` on older browsers (IE11 and below) is provided in case you want to add it to your build
