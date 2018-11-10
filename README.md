@@ -14,10 +14,12 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
+
 - [Installation](#installation)
 - [Usage](#usage)
   - [Listen to custom events](#listen-to-custom-events)
   - [Firing custom events](#firing-custom-events)
+- [Debugging](#debugging)
 - [Polyfill](#polyfill)
 - [Contributing](#contributing)
   - [Adding custom events](#adding-custom-events)
