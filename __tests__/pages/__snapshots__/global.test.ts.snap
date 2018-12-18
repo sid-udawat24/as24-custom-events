@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`global events event names must never change 1`] = `"AS24_WATCHLIST_EVENT"`;
+
+exports[`global events event names must never change 2`] = `"FAVORITES:READY"`;
