@@ -13,9 +13,17 @@ export type WatchlistEventCountUpdate = {
 }
 export type WatchlistEvent = WatchlistEventCountUpdate
 
+/**
+ * Indicates that the favorites client finished the initialization
+ * and is ready to accept commands.
+ */
+export const FavoritesReady = 'FAVORITES:READY'
+export type FavoritesReady = undefined
+
 // inform compiler of the as24 custom events
 declare global {
   interface DocumentEventMap {
     [WatchlistEvent]: CustomEvent<WatchlistEvent>
+    [FavoritesReady]: CustomEvent<FavoritesReady>
   }
 }
