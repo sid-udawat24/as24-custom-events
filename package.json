@@ -15,7 +15,8 @@
   },
   "files": [
     "dist",
-    "src"
+    "src",
+    "logCustomEvents.js"
   ],
   "main": "./dist/index.js",
   "module": "./dist/index.es5.js",
