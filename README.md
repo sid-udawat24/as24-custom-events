@@ -14,7 +14,6 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-
 - [Installation](#installation)
 - [Usage](#usage)
   - [Listen to custom events](#listen-to-custom-events)
@@ -73,7 +72,16 @@ The compiler will make sure that the payload in `detail` matches the event defin
 
 ## Debugging
 
-You can log all custom event traffic easily on the browser by pasting the contents of [logCustomEvents](./logCustomEvents.js) into the console. This will log all events
+You can log all custom event traffic easily on the browser by including the [logCustomEvents](./logCustomEvents.js) as a polyfill in your application. If you're using webpack, you can install it as part of your entrypoint.
+
+```ts
+// webpack config
+entry: {
+  main: ['@autoscout24/custom-events/logCustomEvents.js', 'YOUR_ENTRYPOINT_HERE']
+}
+```
+
+This will log all events
 
 ![log custom event](https://user-images.githubusercontent.com/4490289/48299536-61341800-e4ce-11e8-9788-09b2a97b2435.gif)
 
