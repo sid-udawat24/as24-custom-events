@@ -97,6 +97,12 @@ To add a new page event:
 
 Since the global events are not really controlled by this library (they are fired by other applications), even if we tag a change as breaking it's not like the consumers will be safe by staying on older versions since at runtime the events will be upgraded. We still use versioning to keep the clients informed of potential breaking changes (ideally there should be none)
 
+Use labels for bumping version:
+
+- release:bugfix -> patch
+- release:enhacement -> minor
+- release:breaking -> breaking
+
 ### Rollup config
 
 Rollup is used to bundle the library. [Bundle Statistics](./stats/index.html) are available after build to inspect package size.
