@@ -22,7 +22,7 @@
   "types": "./dist/src/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Scout24/as24-custom-events.git"
+    "url": "git+https://github.com/AutoScout24/as24-custom-events.git"
   },
   "devDependencies": {
     "@types/jest": "^23.3.1",
