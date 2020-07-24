@@ -8,8 +8,6 @@ import * as ListPage from './listpage'
 export const PcsUiShowOverlayEvent = 'PCS_UI_SHOW_OVERLAY'
 export type PcsUiShowOverlayEventPayload = {
   type: typeof PcsUiShowOverlayEvent
-  culture: string
-  source: string
   timeout: number
 }
 
