@@ -3,6 +3,17 @@ import * as ListPage from './listpage'
 // Events that are present across all pages
 
 /**
+ * Privacy Consent Service UI events
+ */
+export const PcsUiShowOverlayEvent = 'PCS_UI_SHOW_OVERLAY'
+export type PcsUiShowOverlayEventPayload = {
+  type: typeof PcsUiShowOverlayEvent
+  culture: string
+  source: string
+  timeout: number
+}
+
+/**
  * Watchlist event
  */
 export const WatchlistEvent = 'AS24_WATCHLIST_EVENT'
@@ -39,5 +50,6 @@ declare global {
     [FavoritesReady]: CustomEvent<FavoritesReady>
     [FavoriteAddedEvent]: CustomEvent<FavoriteAddedEventPayload>
     [FavoriteRemovedEvent]: CustomEvent<FavoriteRemovedEventPayload>
+    [PcsUiShowOverlayEvent]: CustomEvent<PcsUiShowOverlayEventPayload>
   }
 }
