@@ -16,6 +16,6 @@
 set -e
 
 # command will throw if there are no labels associated to the PR because of the unsafe items[0] selector
-curl -s https://api.github.com/search/issues?q=${1}+type:pr+is:merged+repo:Scout24/as24-custom-events \
+curl -s https://api.github.com/search/issues?q=${1}+type:pr+is:merged+repo:Autoscout24/as24-custom-events \
   | jq -r '.items[0] .labels[] | select(.name | contains("release:")) | .name = (if .name =="release:breaking" then "major" elif .name == "release:enhancement" then "minor" else "patch" end) | .name'
   
