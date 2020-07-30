@@ -3,7 +3,7 @@ import * as ListPage from './listpage'
 // Events that are present across all pages
 
 /**
- * Privacy Consent Service UI events
+ * Privacy Consent Service UI events to show overlay
  */
 export const PcsUiShowOverlayEvent = 'PCS_UI_SHOW_OVERLAY'
 export type PcsUiShowOverlayEventPayload = {
