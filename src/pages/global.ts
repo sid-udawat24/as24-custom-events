@@ -35,6 +35,7 @@ export const FavoriteRemovedEvent = 'WATCHLIST:FAVORITE_REMOVED'
 export type FavoriteAddedEventPayload = {
   type: typeof FavoriteAddedEvent
   value: string
+  fuseSignup?: boolean
 }
 export type FavoriteRemovedEventPayload = {
   type: typeof FavoriteRemovedEvent
