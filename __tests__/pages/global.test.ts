@@ -16,7 +16,7 @@ describe('global events', () => {
   test('type definitions are inferred correctly by compiler', () => {
     document.addEventListener(p.WatchlistEvent, e => e.detail.value as number)
     document.addEventListener(p.FavoritesReady, e => e.detail as undefined)
-    document.addEventListener(p.FavoriteAddedEvent, e => e.detail.value as string && e.detail.fuseSignup as boolean | null)
+    document.addEventListener(p.FavoriteAddedEvent, e => e.detail.value as string)
     document.addEventListener(p.FavoriteRemovedEvent, e => e.detail.value as string)
     document.addEventListener(p.PcsUiShowOverlayEvent, e => e.detail.timeout as number)
     expect(true).toBeTruthy() // dummy assertion since compiler check is the real test
