@@ -1,6 +1,6 @@
+import { strict } from 'assert'
 import strictCustomEvent from '../../src/constructors/strictCustomEvent'
 import * as p from '../../src/pages/listpage'
-import { strict } from 'assert'
 
 describe('strict custom events', () => {
   test('proxy function call to regular CustomEvent', () => {
