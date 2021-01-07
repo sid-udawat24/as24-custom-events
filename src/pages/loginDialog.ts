@@ -5,7 +5,10 @@ export enum LoginDialogType {
   NONE = 'NONE',
   SIGN_IN_AND_UP = 'SIGN_IN_AND_UP',
   SIGN_IN = 'SIGN_IN',
-  SIGN_UP = 'SIGN_UP'
+  SIGN_UP = 'SIGN_UP',
+  PASSWORD_FORGOTTEN = 'PASSWORD_FORGOTTEN',
+  CONFIRMATION = 'CONFIRMATION',
+  SUCCESS = 'SUCCESS',
 }
 
 export type LoginDialogTypeChange = {
