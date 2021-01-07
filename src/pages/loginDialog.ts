@@ -8,7 +8,7 @@ export enum LoginDialogType {
   SIGN_UP = 'SIGN_UP',
   PASSWORD_FORGOTTEN = 'PASSWORD_FORGOTTEN',
   CONFIRMATION = 'CONFIRMATION',
-  SUCCESS = 'SUCCESS',
+  SUCCESS = 'SUCCESS'
 }
 
 export type LoginDialogTypeChange = {
