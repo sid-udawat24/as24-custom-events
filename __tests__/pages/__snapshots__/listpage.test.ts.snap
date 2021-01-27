@@ -6,12 +6,14 @@ exports[`listpage events event names must never change 2`] = `"TOTAL_COUNT_UPDAT
 
 exports[`listpage events event names must never change 3`] = `"list-items:changed"`;
 
-exports[`listpage events event names must never change 4`] = `"SAVED_SEARCHES_FRAGMENT_INIT"`;
+exports[`listpage events event names must never change 4`] = `"SEARCH_ID_UPDATED"`;
 
-exports[`listpage events event names must never change 5`] = `"LIST_ITEMS_INITIALIZED"`;
+exports[`listpage events event names must never change 5`] = `"SAVED_SEARCHES_FRAGMENT_INIT"`;
 
-exports[`listpage events event names must never change 6`] = `"WEB_PUSH:OPT_IN"`;
+exports[`listpage events event names must never change 6`] = `"LIST_ITEMS_INITIALIZED"`;
 
-exports[`listpage events event names must never change 7`] = `"CLASSIFIED_LIST:REQUEST_FILTER_VALUES"`;
+exports[`listpage events event names must never change 7`] = `"WEB_PUSH:OPT_IN"`;
 
-exports[`listpage events event names must never change 8`] = `"CLASSIFIED_LIST:FILTER_EDIT_INITIALIZED"`;
+exports[`listpage events event names must never change 8`] = `"CLASSIFIED_LIST:REQUEST_FILTER_VALUES"`;
+
+exports[`listpage events event names must never change 9`] = `"CLASSIFIED_LIST:FILTER_EDIT_INITIALIZED"`;

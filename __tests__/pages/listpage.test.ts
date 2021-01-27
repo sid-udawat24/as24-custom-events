@@ -5,6 +5,7 @@ describe('listpage events', () => {
     p.ClassifiedListFilterUpdate,
     p.ClassifiedListTotalCountUpdate,
     p.ListItemsChanged,
+    p.SearchIdUpdated,
     p.SavedSearchesFragmentInitialization,
     p.ListItemsInitialized,
     p.WebPushOptIn,
@@ -21,6 +22,7 @@ describe('listpage events', () => {
     document.addEventListener(p.ClassifiedListTotalCountUpdate, e => e.detail.totalCount)
     document.addEventListener(p.ListItemsChanged, e => e.detail as undefined)
     document.addEventListener(p.ListItemsInitialized, e => e.detail as undefined)
+    document.addEventListener(p.SearchIdUpdated, e => e.detail as undefined)
     document.addEventListener(p.SavedSearchesFragmentInitialization, e => e.detail as undefined)
     document.addEventListener(p.WebPushOptIn, e => e.detail.as24Visitor as string)
     document.addEventListener(p.ClassifiedListRequestFiltersValue, e => e.detail as undefined)
