@@ -49,12 +49,6 @@ export type ListItemsChanged = undefined
 export const ListItemsInitialized = 'LIST_ITEMS_INITIALIZED'
 export type ListItemsInitialized = undefined
 
-/**
- * Indicates the list items summary fragment has been wired internally
- */
-export const SearchIdUpdated = 'SEARCH_ID_UPDATED'
-export type SearchIdUpdated = undefined
-
 export const SavedSearchesFragmentInitialization = 'SAVED_SEARCHES_FRAGMENT_INIT'
 export type SavedSearchesFragmentInitialization = undefined
 
@@ -79,7 +73,6 @@ declare global {
     [SavedSearchesFragmentInitialization]: CustomEvent<SavedSearchesFragmentInitialization>
     [ListItemsChanged]: CustomEvent<ListItemsChanged>
     [ListItemsInitialized]: CustomEvent<ListItemsInitialized>
-    [SearchIdUpdated]: CustomEvent<SearchIdUpdated>
     [WebPushOptIn]: CustomEvent<WebPushOptIn>
     [ClassifiedListFilterEditInitialized]: CustomEvent<ClassifiedListFilterEditInitialized>
   }
