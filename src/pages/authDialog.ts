@@ -13,6 +13,7 @@ export type AuthDialogTypeChange = {
   redirectUrl?: string
   /**
    * The touchpoint of signin/signup attempt, i.e. 'pricehistory', 'pricehistory_icon'
+   * Used to track opening event in GA.
    */
   tp?: string
 }
