@@ -66,7 +66,7 @@ import { ListPage, strictCustomEvent } from '@autoscout24/custom-events'
 
 document.dispatchEvent(strictCustomEvent(ListPage.ClassifiedListTotalCountUpdate, { detail: {
   totalCount: 42
-}})
+}}))
 ```
 
 The compiler will make sure that the payload in `detail` matches the event definition associated to the key.
