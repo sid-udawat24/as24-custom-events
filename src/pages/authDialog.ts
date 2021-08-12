@@ -1,8 +1,7 @@
 export const AuthDialogTypeChangeEvent = 'AUTH_DIALOG_TYPE_CHANGE_EVENT'
+export const AuthDialogFragmentReadyEvent = 'AUTH_DIALOG_FRAGMENT_READY_EVENT'
 
-export const AuthPopupFragmentReadyEvent = 'AUTH_POPUP_FRAGMENT_READY_EVENT'
-export type AuthPopupFragmentReady = {}
-
+export type AuthDialogFragmentReady = {}
 export type AuthDialogTypeChange = {
   /**
    * clientId - OKTA app id, see https://docs.services.as24.tech/autoscout24/products/identity/howto/#register-a-new-client
@@ -42,6 +41,6 @@ export type AuthDialogTypeChange = {
 declare global {
   interface DocumentEventMap {
     [AuthDialogTypeChangeEvent]: CustomEvent<AuthDialogTypeChange>
-    [AuthPopupFragmentReadyEvent]: CustomEvent<AuthPopupFragmentReady>
+    [AuthDialogFragmentReadyEvent]: CustomEvent<AuthDialogFragmentReady>
   }
 }
