@@ -22,19 +22,19 @@ export type AuthDialogTypeChange = {
    */
   overrideText?: {
     // "Sign In"
-    signInTitle: string
+    signInTitle?: string
     // "Welcome!"
-    signInTeaserTitle: string
+    signInTeaserTitle?: string
     // "Log in and keep all your searches in one place."
-    signInTeaserDescription: string
+    signInTeaserDescription?: string
     // "Sign In"
-    socialTitle: string
+    socialTitle?: string
     // "Log in and keep all your searches in one place."
-    socialDescription: string
+    socialDescription?: string
     // "Sign up"
-    signUpTitle: string
+    signUpTitle?: string
     // "Sign up and keep all your searches in one place."
-    signUpDescription: string
+    signUpDescription?: string
   }
 }
 
