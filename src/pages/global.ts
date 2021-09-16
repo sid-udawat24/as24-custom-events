@@ -12,6 +12,15 @@ export type PcsUiShowOverlayEventPayload = {
 }
 
 /**
+ * Privacy Consent Service UI events to show DOI OptIn overlay
+ */
+export const PcsUiShowDoiOptinOverlayEvent = 'PCS_UI_SHOW_DOI_OPTIN_OVERLAY'
+export type PcsUiShowDoiOptinOverlayEventPayload = {
+  type: typeof PcsUiShowDoiOptinOverlayEvent
+  timeout: number
+}
+
+/**
  * Watchlist event
  */
 export const WatchlistEvent = 'AS24_WATCHLIST_EVENT'
@@ -49,5 +58,6 @@ declare global {
     [FavoriteAddedEvent]: CustomEvent<FavoriteAddedEventPayload>
     [FavoriteRemovedEvent]: CustomEvent<FavoriteRemovedEventPayload>
     [PcsUiShowOverlayEvent]: CustomEvent<PcsUiShowOverlayEventPayload>
+    [PcsUiShowDoiOptinOverlayEvent]: CustomEvent<PcsUiShowDoiOptinOverlayEventPayload>
   }
 }
