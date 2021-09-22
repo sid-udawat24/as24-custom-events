@@ -9,3 +9,5 @@ exports[`global events event names must never change 3`] = `"WATCHLIST:FAVORITE_
 exports[`global events event names must never change 4`] = `"WATCHLIST:FAVORITE_REMOVED"`;
 
 exports[`global events event names must never change 5`] = `"PCS_UI_SHOW_OVERLAY"`;
+
+exports[`global events event names must never change 6`] = `"PCS_UI_SHOW_DOI_OPTIN_OVERLAY"`;
